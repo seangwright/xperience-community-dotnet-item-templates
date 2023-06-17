@@ -1,0 +1,65 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Sean G. Wright",
+  "classifications": ["Web", "ASP.NET"],
+  "name": "Xperience Page Builder Widget",
+  "generatorVersions": "[1.0.0.0-*)",
+  "description": "Xperience by Kentico Page Builder Widget with Widget Properties, View Model, and a Razor View",
+  "tags": {
+    "language": "C#",
+    "type": "item"
+  },
+  "groupIdentity": "XperinceCommunity.PageBuilder.Widget",
+  "precedence": "10",
+  "identity": "XperienceCommunity.PageBuilder.Widget.26.3.0.0",
+  "shortName": "xpc-page-builder-widget",
+  "sourceName": "Hero",
+  "primaryOutputs": [
+    {
+      "path": "HeroWidget.cs"
+    },
+    {
+      "path": "HeroWidget.cshtml"
+    }
+  ],
+  "defaultName": "Hero",
+  "symbols": {
+    "namespace": {
+      "description": "Namespace for the generated code",
+      "replaces": "MyApp.Web.Components.Widgets",
+      "type": "parameter"
+    },
+    "HostIdentifier": {
+      "type": "bind",
+      "binding": "HostIdentifier"
+    },
+    "displayName": {
+      "type": "generated",
+      "generator": "regex",
+      "dataType": "string",
+      "replaces": "displayName",
+      "parameters": {
+        "source": "name",
+        "steps": [
+          {
+            "regex": "(?<!^)(?=[A-Z])",
+            "replacement": " "
+          }
+        ]
+      }
+    }
+  },
+  "postActions": [
+    {
+      "id": "openInEditor",
+      "condition": "(HostIdentifier != \"dotnetcli\" && HostIdentifier != \"dotnetcli-preview\")",
+      "description": "Opens the created Widget in the editor",
+      "manualInstructions": [],
+      "actionId": "84C0DA21-51C8-4541-9940-6CA19AF04EE6",
+      "args": {
+        "files": "0"
+      },
+      "continueOnError": true
+    }
+  ]
+}

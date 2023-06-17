@@ -1,0 +1,45 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "dotnet: pack",
+      "command": "dotnet",
+      "type": "shell",
+      "args": [
+        "pack",
+        "src/templatepack.csproj",
+        "-o",
+        "./",
+        "/property:GenerateFullPaths=true",
+        "/consoleloggerparameters:NoSummary"
+      ],
+      "group": "build",
+      "presentation": {
+        "reveal": "silent"
+      },
+      "dependsOn": ["dotnet: build"],
+      "problemMatcher": "$msCompile"
+    },
+    {
+      "type": "dotnet",
+      "task": "build",
+      "problemMatcher": ["$msCompile"],
+      "group": "build",
+      "label": "dotnet: build",
+      "dependsOn": ["dotnet: restore"]
+    },
+    {
+      "label": "dotnet: restore",
+      "command": "dotnet",
+      "type": "shell",
+      "args": ["restore", "src/src.sln"],
+      "group": "build",
+      "presentation": {
+        "reveal": "silent"
+      },
+      "problemMatcher": "$msCompile"
+    }
+  ]
+}
