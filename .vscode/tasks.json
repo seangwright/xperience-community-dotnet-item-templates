@@ -40,6 +40,52 @@
         "reveal": "silent"
       },
       "problemMatcher": "$msCompile"
+    },
+    {
+      "label": "dotnet: uninstall template",
+      "command": "dotnet",
+      "type": "shell",
+      "args": ["new", "uninstall", "XperienceCommunity.DotnetItemTemplates"],
+      "group": "build",
+      "presentation": {
+        "reveal": "silent"
+      },
+      "problemMatcher": "$msCompile"
+    },
+    {
+      "label": "dotnet: install template",
+      "command": "dotnet",
+      "type": "shell",
+      "args": [
+        "new",
+        "install",
+        ".\\XperienceCommunity.DotnetItemTemplates.${input:templateVersionNumber}.nupkg"
+      ],
+      "group": "build",
+      "presentation": {
+        "reveal": "silent"
+      },
+      "problemMatcher": "$msCompile"
+    },
+    {
+      "label": "templates: reset cache",
+      "command": "scripts/Reset-Templates.ps1",
+      "type": "shell",
+      "args": [],
+      "group": "build",
+      "presentation": {
+        "reveal": "silent"
+      },
+      "dependsOn": [],
+      "problemMatcher": "$msCompile"
+    }
+  ],
+  "inputs": [
+    {
+      "id": "templateVersionNumber",
+      "description": "Template Version Number",
+      "default": "1.0.0",
+      "type": "promptString"
     }
   ]
 }

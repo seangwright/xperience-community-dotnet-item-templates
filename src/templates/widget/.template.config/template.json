@@ -27,7 +27,13 @@
     "namespace": {
       "description": "Namespace for the generated code",
       "replaces": "MyApp.Web.Components.Widgets",
-      "type": "parameter"
+      "type": "parameter",
+      "defaultValue": "DefaultNamespace"
+    },
+    "DefaultNamespace": {
+      "type": "bind",
+      "binding": "msbuild:RootNamespace",
+      "replaces": "MyApp.Web.Components.Widgets"
     },
     "HostIdentifier": {
       "type": "bind",
