@@ -2,7 +2,7 @@
 
 .NET CLI Item Templates for Xperience by Kentico projects, usable at the command line or in Visual Studio
 
-<video src="https://raw.githubusercontent.com/seangwright/xperience-community-dotnet-item-templates/main/images/xperience-widget-vs-template.mp4">
+![Using the Widget Item Template in Visual Studio](https://raw.githubusercontent.com/seangwright/xperience-community-dotnet-item-templates/main/images/xperience-widget-vs-template.webp)
 
 ## Building and Testing
 
