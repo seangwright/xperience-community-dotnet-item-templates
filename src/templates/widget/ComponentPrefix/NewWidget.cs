@@ -3,36 +3,35 @@ using Kentico.Xperience.Admin.Base;
 using Kentico.Xperience.Admin.Base.FormAnnotations;
 using Kentico.PageBuilder.Web.Mvc;
 using Microsoft.AspNetCore.Mvc;
-using MyApp.Web.Components.Widgets;
+using MyApp.Web.Components.Widgets.ComponentPrefix;
 
 [assembly: RegisterWidget(
-    identifier: HeroWidget.IDENTIFIER,
-    viewComponentType: typeof(HeroWidget),
+    identifier: NewWidget.IDENTIFIER,
+    viewComponentType: typeof(NewWidget),
     name: "displayName Widget",
-    propertiesType: typeof(HeroWidgetProperties),
+    propertiesType: typeof(NewWidgetProperties),
     Description = "A displayName Widget.",
     IconClass = Icons.CustomElement)]
 
-namespace MyApp.Web.Components.Widgets;
+namespace MyApp.Web.Components.Widgets.ComponentPrefix;
 
-public class HeroWidget : ViewComponent
+public class NewWidget : ViewComponent
 {
-    public const string IDENTIFIER = "MyApp.Web.Components.Widgets.HeroWidget";
+    public const string IDENTIFIER = "MyApp.Web.Components.Widgets.NewWidget";
 
-    public HeroWidget() { }
+    public NewWidget() { }
 
-    public async Task<IViewComponentResult> InvokeAsync(ComponentViewModel<HeroWidgetProperties> cvm)
+    public async Task<IViewComponentResult> InvokeAsync(ComponentViewModel<NewWidgetProperties> cvm)
     {
-        var vm = new HeroWidgetViewModel(cvm.Properties);
+        var vm = new NewWidgetViewModel(cvm.Properties);
 
         await Task.CompletedTask;
 
         return View(vm);
     }
-
 }
 
-public class HeroWidgetProperties : IWidgetProperties
+public class NewWidgetProperties : IWidgetProperties
 {
     [TextInputComponent(
         Label = "Label",
@@ -42,9 +41,9 @@ public class HeroWidgetProperties : IWidgetProperties
     public string Label { get; set; } = "";
 }
 
-public class HeroWidgetViewModel
+public class NewWidgetViewModel
 {
-    public HeroWidgetViewModel(HeroWidgetProperties props)
+    public NewWidgetViewModel(NewWidgetProperties props)
     {
         Label = props.Label;
     }

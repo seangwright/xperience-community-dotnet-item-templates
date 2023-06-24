@@ -13,46 +13,71 @@
   "precedence": "10",
   "identity": "XperienceCommunity.PageBuilder.Widget.26.3.0.0",
   "shortName": "xpc-page-builder-widget",
-  "sourceName": "Hero",
+  "sourceName": "NewWidget",
   "primaryOutputs": [
     {
-      "path": "HeroWidget.cs"
+      "path": "NewWidget.cs"
     },
     {
-      "path": "HeroWidget.cshtml"
+      "path": "NewWidget.cshtml"
     }
   ],
-  "defaultName": "Hero",
+  "defaultName": "NewWidget",
+  "preferNameDirectory": false,
+  "preferDefaultName": true,
   "symbols": {
     "namespace": {
-      "description": "Namespace for the generated code",
+      "type": "generated",
+      "generator": "coalesce",
       "replaces": "MyApp.Web.Components.Widgets",
-      "type": "parameter",
-      "defaultValue": "DefaultNamespace"
+      "parameters": {
+        "sourceVariableName": "IDENamespace",
+        "fallbackVariableName": "RootNamespace",
+        "defaultValue": "MyApp.Web.Components.Widgets"
+      }
     },
-    "DefaultNamespace": {
+    "IDENamespace": {
+      "type": "bind",
+      "binding": "host:namespace",
+      "defaultValue": ""
+    },
+    "RootNamespace": {
       "type": "bind",
       "binding": "msbuild:RootNamespace",
-      "replaces": "MyApp.Web.Components.Widgets"
+      "defaultValue": ""
     },
     "HostIdentifier": {
       "type": "bind",
       "binding": "HostIdentifier"
     },
+    "componentPrefix": {
+      "type": "derived",
+      "fileRename": "ComponentPrefix",
+      "replaces": "ComponentPrefix",
+      "valueSource": "name",
+      "valueTransform": "extractName"
+    },
     "displayName": {
-      "type": "generated",
-      "generator": "regex",
-      "dataType": "string",
+      "type": "derived",
+      "valueSource": "name",
       "replaces": "displayName",
-      "parameters": {
-        "source": "name",
-        "steps": [
-          {
-            "regex": "(?<!^)(?=[A-Z])",
-            "replacement": " "
-          }
-        ]
-      }
+      "valueTransform": "nameToWords"
+    }
+  },
+  "forms": {
+    "extractName": {
+      "identifier": "replace",
+      "pattern": "^(\\w+)Widget$",
+      "replacement": "$1"
+    },
+    "pascalToWords": {
+      "identifier": "replace",
+      "pattern": "(?<!^)(?=[A-Z])",
+      "replacement": " "
+    },
+    "nameToWords": {
+      "identifier": "chain",
+      "steps": ["extractName", "pascalToWords"]
     }
   },
   "postActions": [
