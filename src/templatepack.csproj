@@ -21,7 +21,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="templates\**\*" Exclude="templates\**\bin\**;templates\**\obj\**;templates\**\*.csproj" />
+    <Content Include="templates\**\*" />
+    <Content Remove="templates\**\bin\**;templates\**\obj\**" />
+    <Content Remove="templates\**\*.csproj" />
+    <Content Remove="templates\**\_ViewImports.cshtml" />
+
     <Compile Remove="**\*" />
   </ItemGroup>
 

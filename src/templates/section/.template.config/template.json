@@ -1,0 +1,96 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Xperience Community",
+  "classifications": ["Web", "ASP.NET"],
+  "name": "Xperience Page Builder Section",
+  "generatorVersions": "[1.0.0.0-*)",
+  "description": "Xperience by Kentico Page Builder Section with Section Properties, View Model, and a Razor View",
+  "tags": {
+    "language": "C#",
+    "type": "item"
+  },
+  "groupIdentity": "XperinceCommunity.PageBuilder.Section",
+  "precedence": "10",
+  "identity": "XperienceCommunity.PageBuilder.Section.26.3.0.0",
+  "shortName": "xpc-page-builder-section",
+  "sourceName": "NewSection",
+  "primaryOutputs": [
+    {
+      "path": "ComponentPrefix/NewSection.cs"
+    },
+    {
+      "path": "ComponentPrefix/NewSection.cshtml"
+    }
+  ],
+  "defaultName": "NewSection",
+  "preferNameDirectory": false,
+  "preferDefaultName": true,
+  "symbols": {
+    "namespace": {
+      "type": "generated",
+      "generator": "coalesce",
+      "replaces": "MyApp.Web.Components.Sections",
+      "parameters": {
+        "sourceVariableName": "IDENamespace",
+        "fallbackVariableName": "RootNamespace",
+        "defaultValue": "MyApp.Web.Components.Sections"
+      }
+    },
+    "IDENamespace": {
+      "type": "bind",
+      "binding": "host:namespace",
+      "defaultValue": ""
+    },
+    "RootNamespace": {
+      "type": "bind",
+      "binding": "msbuild:RootNamespace",
+      "defaultValue": ""
+    },
+    "HostIdentifier": {
+      "type": "bind",
+      "binding": "HostIdentifier"
+    },
+    "componentPrefix": {
+      "type": "derived",
+      "fileRename": "ComponentPrefix",
+      "replaces": "ComponentPrefix",
+      "valueSource": "name",
+      "valueTransform": "extractName"
+    },
+    "displayName": {
+      "type": "derived",
+      "valueSource": "name",
+      "replaces": "displayName",
+      "valueTransform": "nameToWords"
+    }
+  },
+  "forms": {
+    "extractName": {
+      "identifier": "replace",
+      "pattern": "^(\\w+)Section$",
+      "replacement": "$1"
+    },
+    "pascalToWords": {
+      "identifier": "replace",
+      "pattern": "(?<!^)(?=[A-Z])",
+      "replacement": " "
+    },
+    "nameToWords": {
+      "identifier": "chain",
+      "steps": ["extractName", "pascalToWords"]
+    }
+  },
+  "postActions": [
+    {
+      "id": "openInEditor",
+      "condition": "(HostIdentifier != \"dotnetcli\" && HostIdentifier != \"dotnetcli-preview\")",
+      "description": "Opens the created Section in the editor",
+      "manualInstructions": [],
+      "actionId": "84C0DA21-51C8-4541-9940-6CA19AF04EE6",
+      "args": {
+        "files": "0"
+      },
+      "continueOnError": true
+    }
+  ]
+}
