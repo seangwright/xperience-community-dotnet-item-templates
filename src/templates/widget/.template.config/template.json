@@ -1,6 +1,6 @@
 {
   "$schema": "http://json.schemastore.org/template",
-  "author": "Sean G. Wright",
+  "author": "Xperience Community",
   "classifications": ["Web", "ASP.NET"],
   "name": "Xperience Page Builder Widget",
   "generatorVersions": "[1.0.0.0-*)",
@@ -16,10 +16,10 @@
   "sourceName": "NewWidget",
   "primaryOutputs": [
     {
-      "path": "NewWidget.cs"
+      "path": "ComponentPrefix/NewWidget.cs"
     },
     {
-      "path": "NewWidget.cshtml"
+      "path": "ComponentPrefix/NewWidget.cshtml"
     }
   ],
   "defaultName": "NewWidget",
