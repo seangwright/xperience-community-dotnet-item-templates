@@ -2,9 +2,9 @@
   "$schema": "http://json.schemastore.org/template",
   "author": "Xperience Community",
   "classifications": ["Web", "ASP.NET"],
-  "name": "Xperience UIFormComponent",
+  "name": "Xperience UI Form Component",
   "generatorVersions": "[1.0.0.0-*)",
-  "description": "Xperience by Kentico UIFormComponent with client Properties, an Attribute, and a client React Component",
+  "description": "Xperience by Kentico UI Form Component with client Properties, an Attribute, and a client React Component",
   "tags": {
     "language": "C#",
     "type": "item"
@@ -67,7 +67,7 @@
   "forms": {
     "extractName": {
       "identifier": "replace",
-      "pattern": "^(\\w+)UIFormComponent$",
+      "pattern": "^(\\w+)FormComponent$",
       "replacement": "$1"
     },
     "pascalToWords": {
@@ -84,7 +84,7 @@
     {
       "id": "openInEditor",
       "condition": "(HostIdentifier != \"dotnetcli\" && HostIdentifier != \"dotnetcli-preview\")",
-      "description": "Opens the created UIFormComponent in the editor",
+      "description": "Opens the created UI Form Component in the editor",
       "manualInstructions": [],
       "actionId": "84C0DA21-51C8-4541-9940-6CA19AF04EE6",
       "args": {
