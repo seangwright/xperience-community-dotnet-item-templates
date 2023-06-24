@@ -43,9 +43,8 @@
     },
     {
       "label": "dotnet: uninstall template",
-      "command": "dotnet",
+      "command": "dotnet new uninstall XperienceCommunity.DotnetItemTemplates || echo 0",
       "type": "shell",
-      "args": ["new", "uninstall", "XperienceCommunity.DotnetItemTemplates"],
       "group": "build",
       "presentation": {
         "reveal": "silent"
@@ -78,6 +77,27 @@
       },
       "dependsOn": [],
       "problemMatcher": "$msCompile"
+    },
+    {
+      "label": "templates: reinstall",
+      "command": "dotnet",
+      "type": "shell",
+      "args": [
+        "new",
+        "install",
+        ".\\XperienceCommunity.DotnetItemTemplates.${input:templateVersionNumber}.nupkg"
+      ],
+      "group": "build",
+      "presentation": {
+        "reveal": "silent"
+      },
+      "problemMatcher": "$msCompile",
+      "dependsOn": [
+        "dotnet: uninstall template",
+        "templates: reset cache",
+        "dotnet: pack"
+      ],
+      "dependsOrder": "sequence"
     }
   ],
   "inputs": [
