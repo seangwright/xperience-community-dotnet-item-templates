@@ -98,6 +98,15 @@
         "dotnet: pack"
       ],
       "dependsOrder": "sequence"
+    },
+    {
+      "type": "npm",
+      "script": "install",
+      "path": "src/templates",
+      "group": "clean",
+      "problemMatcher": [],
+      "label": "npm: install",
+      "detail": "install dependencies from package"
     }
   ],
   "inputs": [

@@ -26,6 +26,10 @@
     <Content Remove="templates\**\*.csproj" />
     <Content Remove="templates\**\_ViewImports.cshtml" />
 
+    <Content Remove="templates\**\package.json;templates\**\package-lock.json" />
+    <Content Remove="templates\**\babel.config.json;templates\**\tsconfig.json" />
+    <Content Remove="templates\**\node_modules" />
+
     <Compile Remove="**\*" />
   </ItemGroup>
 
