@@ -1,4 +1,3 @@
-using CMS.Membership;
 using Kentico.Xperience.Admin.Base;
 using MySite.Admin.ModulePrefix;
 
