@@ -18,5 +18,14 @@
     "editor.defaultFormatter": "DotJoshJohnson.xml"
   },
 
-  "dotnet.defaultSolution": "src\\src.sln"
+  "dotnet.defaultSolution": "src\\src.sln",
+  "emmet.includeLanguages": {
+    "aspnetcorerazor": "html"
+  },
+  "[csharp]": {
+    "editor.defaultFormatter": "ms-dotnettools.csharp"
+  },
+  "[aspnetcorerazor]": {
+    "editor.defaultFormatter": "ms-dotnettools.csharp"
+  }
 }

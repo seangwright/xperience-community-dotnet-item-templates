@@ -1,0 +1,10 @@
+@using Kentico.Web.Mvc;
+@using Kentico.Forms.Web.Mvc
+
+@model MyApp.Web.Components.Widgets.ComponentPrefix.NewFormComponent
+
+@{
+    var htmlAttributes = ViewData.Kentico().GetEditorHtmlAttributes();
+}
+
+@Html.TextBoxFor(m => m.Value, htmlAttributes)
