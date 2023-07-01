@@ -2,24 +2,24 @@
   "$schema": "http://json.schemastore.org/template",
   "author": "Xperience Community",
   "classifications": ["Web", "ASP.NET"],
-  "name": "Xperience Admin Module",
+  "name": "Xperience Admin Create Page",
   "generatorVersions": "[1.0.0.0-*)",
-  "description": "Xperience by Kentico Admin Module",
+  "description": "Xperience by Kentico Admin Create Page",
   "tags": {
     "language": "C#",
     "type": "item"
   },
-  "groupIdentity": "XperinceCommunity.Admin.Module",
+  "groupIdentity": "XperinceCommunity.Admin.CreatePage",
   "precedence": "10",
-  "identity": "XperienceCommunity.Admin.Module.26.3.0.0",
-  "shortName": "xpc-admin-module",
-  "sourceName": "NewAdminModule",
+  "identity": "XperienceCommunity.Admin.CreatePage.26.3.0.0",
+  "shortName": "xpc-admin-create-page",
+  "sourceName": "NewCreatePage",
   "primaryOutputs": [
     {
-      "path": "NewAdminModule.cs"
+      "path": "NewCreatePage.cs"
     }
   ],
-  "defaultName": "NewAdminModule",
+  "defaultName": "NewCreatePage",
   "preferNameDirectory": false,
   "preferDefaultName": true,
   "symbols": {
@@ -30,7 +30,7 @@
       "parameters": {
         "sourceVariableName": "IDENamespace",
         "fallbackVariableName": "RootNamespace",
-        "defaultValue": "MySite.Admin.ModulePrefix"
+        "defaultValue": "MySite.Admin.ModulePrefixs"
       }
     },
     "IDENamespace": {
@@ -54,6 +54,44 @@
       "valueSource": "name",
       "valueTransform": "extractName"
     },
+    "ParentPage": {
+      "type": "generated",
+      "generator": "join",
+      "replaces": "NewEditSectionPage",
+      "parameters": {
+        "symbols": [
+          {
+            "type": "ref",
+            "value": "ModulePrefix"
+          },
+          {
+            "type": "const",
+            "value": "EditSectionPage"
+          }
+        ],
+        "separator": "",
+        "removeEmptyValues": true
+      }
+    },
+    "EditPage": {
+      "type": "generated",
+      "generator": "join",
+      "replaces": "NewEditPage",
+      "parameters": {
+        "symbols": [
+          {
+            "type": "ref",
+            "value": "ModulePrefix"
+          },
+          {
+            "type": "const",
+            "value": "EditPage"
+          }
+        ],
+        "separator": "",
+        "removeEmptyValues": true
+      }
+    },
     "DisplayName": {
       "type": "derived",
       "valueSource": "name",
@@ -64,7 +102,7 @@
   "forms": {
     "extractName": {
       "identifier": "replace",
-      "pattern": "^(\\w+)AdminModule$",
+      "pattern": "^(\\w+)CreatePage$",
       "replacement": "$1"
     },
     "pascalToWords": {
@@ -81,7 +119,7 @@
     {
       "id": "openInEditor",
       "condition": "(HostIdentifier != \"dotnetcli\" && HostIdentifier != \"dotnetcli-preview\")",
-      "description": "Opens the created Admin Module in the editor",
+      "description": "Opens the created Admin Create Page in the editor",
       "manualInstructions": [],
       "actionId": "84C0DA21-51C8-4541-9940-6CA19AF04EE6",
       "args": {

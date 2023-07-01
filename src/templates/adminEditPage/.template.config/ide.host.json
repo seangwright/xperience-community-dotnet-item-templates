@@ -1,0 +1,6 @@
+{
+  "$schema": "https://json.schemastore.org/ide.host",
+  "icon": "../../images/icon.png",
+  "defaultItemExtension": "cs",
+  "itemHierarchyPaths": ["Xperience by Kentico"]
+}

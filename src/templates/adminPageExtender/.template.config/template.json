@@ -16,7 +16,7 @@
   "sourceName": "NewPageExtender",
   "primaryOutputs": [
     {
-      "path": "ModulePrefix/NewPageExtender.cs"
+      "path": "NewPageExtender.cs"
     }
   ],
   "defaultName": "NewPageExtender",
@@ -26,11 +26,11 @@
     "namespace": {
       "type": "generated",
       "generator": "coalesce",
-      "replaces": "MyApp.Admin.ModulePrefix",
+      "replaces": "MySite.Admin.ModulePrefix",
       "parameters": {
         "sourceVariableName": "IDENamespace",
         "fallbackVariableName": "RootNamespace",
-        "defaultValue": "MyApp.Admin.ModulePrefixs"
+        "defaultValue": "MySite.Admin.ModulePrefixs"
       }
     },
     "IDENamespace": {
@@ -47,23 +47,11 @@
       "type": "bind",
       "binding": "HostIdentifier"
     },
-    "componentPrefix": {
+    "ModulePrefix": {
       "type": "derived",
       "fileRename": "ModulePrefix",
       "replaces": "ModulePrefix",
       "valueSource": "name",
-      "valueTransform": "extractName"
-    },
-    "displayName": {
-      "type": "derived",
-      "valueSource": "name",
-      "replaces": "displayName",
-      "valueTransform": "nameToWords"
-    },
-    "codeName": {
-      "type": "derived",
-      "valueSource": "name",
-      "replaces": "codeName",
       "valueTransform": "extractName"
     }
   },
@@ -72,15 +60,6 @@
       "identifier": "replace",
       "pattern": "^(\\w+)PageExtender$",
       "replacement": "$1"
-    },
-    "pascalToWords": {
-      "identifier": "replace",
-      "pattern": "(?<!^)(?=[A-Z])",
-      "replacement": " "
-    },
-    "nameToWords": {
-      "identifier": "chain",
-      "steps": ["extractName", "pascalToWords"]
     }
   },
   "postActions": [

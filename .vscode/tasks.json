@@ -58,7 +58,7 @@
       "args": [
         "new",
         "install",
-        ".\\XperienceCommunity.DotnetItemTemplates.${input:templateVersionNumber}.nupkg"
+        ".\\XperienceCommunity.DotnetItemTemplates.1.0.0.nupkg"
       ],
       "group": "build",
       "presentation": {
@@ -80,13 +80,9 @@
     },
     {
       "label": "templates: reinstall",
-      "command": "dotnet",
+      "command": "echo",
       "type": "shell",
-      "args": [
-        "new",
-        "install",
-        ".\\XperienceCommunity.DotnetItemTemplates.${input:templateVersionNumber}.nupkg"
-      ],
+      "args": ["Reinstall Complete"],
       "group": "build",
       "presentation": {
         "reveal": "silent"
@@ -95,7 +91,8 @@
       "dependsOn": [
         "dotnet: uninstall template",
         "templates: reset cache",
-        "dotnet: pack"
+        "dotnet: pack",
+        "dotnet: install template"
       ],
       "dependsOrder": "sequence"
     },
@@ -107,14 +104,6 @@
       "problemMatcher": [],
       "label": "npm: install",
       "detail": "install dependencies from package"
-    }
-  ],
-  "inputs": [
-    {
-      "id": "templateVersionNumber",
-      "description": "Template Version Number",
-      "default": "1.0.0",
-      "type": "promptString"
     }
   ]
 }

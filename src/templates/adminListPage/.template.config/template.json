@@ -12,14 +12,11 @@
   "groupIdentity": "XperinceCommunity.Admin.ListPage",
   "precedence": "10",
   "identity": "XperienceCommunity.Admin.ListPage.26.3.0.0",
-  "shortName": "xpc-admin-application-page",
+  "shortName": "xpc-admin-list-page",
   "sourceName": "NewListPage",
   "primaryOutputs": [
     {
-      "path": "ModulePrefix/NewListPage.cs"
-    },
-    {
-      "path": "ModulePrefix/NewListPage.cshtml"
+      "path": "NewListPage.cs"
     }
   ],
   "defaultName": "NewListPage",
@@ -29,11 +26,11 @@
     "namespace": {
       "type": "generated",
       "generator": "coalesce",
-      "replaces": "MyApp.Admin.ModulePrefix",
+      "replaces": "MySite.Admin.ModulePrefix",
       "parameters": {
         "sourceVariableName": "IDENamespace",
         "fallbackVariableName": "RootNamespace",
-        "defaultValue": "MyApp.Admin.ModulePrefixs"
+        "defaultValue": "MySite.Admin.ModulePrefixs"
       }
     },
     "IDENamespace": {
@@ -50,24 +47,37 @@
       "type": "bind",
       "binding": "HostIdentifier"
     },
-    "componentPrefix": {
+    "ModulePrefix": {
       "type": "derived",
       "fileRename": "ModulePrefix",
       "replaces": "ModulePrefix",
       "valueSource": "name",
       "valueTransform": "extractName"
     },
-    "displayName": {
-      "type": "derived",
-      "valueSource": "name",
-      "replaces": "displayName",
-      "valueTransform": "nameToWords"
+    "ParentPage": {
+      "type": "generated",
+      "generator": "join",
+      "replaces": "NewApplicationPage",
+      "parameters": {
+        "symbols": [
+          {
+            "type": "ref",
+            "value": "ModulePrefix"
+          },
+          {
+            "type": "const",
+            "value": "ApplicationPage"
+          }
+        ],
+        "separator": "",
+        "removeEmptyValues": true
+      }
     },
-    "codeName": {
+    "DisplayName": {
       "type": "derived",
       "valueSource": "name",
-      "replaces": "codeName",
-      "valueTransform": "extractName"
+      "replaces": "DisplayName",
+      "valueTransform": "nameToWords"
     }
   },
   "forms": {
@@ -88,7 +98,7 @@
   },
   "postActions": [
     {
-      "id": "openInEditor",
+      "id": "openInListor",
       "condition": "(HostIdentifier != \"dotnetcli\" && HostIdentifier != \"dotnetcli-preview\")",
       "description": "Opens the created Admin List Page in the editor",
       "manualInstructions": [],

@@ -16,10 +16,7 @@
   "sourceName": "NewApplicationPage",
   "primaryOutputs": [
     {
-      "path": "ModulePrefix/NewApplicationPage.cs"
-    },
-    {
-      "path": "ModulePrefix/NewApplicationPage.cshtml"
+      "path": "NewApplicationPage.cs"
     }
   ],
   "defaultName": "NewApplicationPage",
@@ -29,11 +26,11 @@
     "namespace": {
       "type": "generated",
       "generator": "coalesce",
-      "replaces": "MyApp.Admin.ModulePrefix",
+      "replaces": "MySite.Admin.ModulePrefix",
       "parameters": {
         "sourceVariableName": "IDENamespace",
         "fallbackVariableName": "RootNamespace",
-        "defaultValue": "MyApp.Admin.ModulePrefixs"
+        "defaultValue": "MySite.Admin.ModulePrefix"
       }
     },
     "IDENamespace": {
@@ -50,24 +47,36 @@
       "type": "bind",
       "binding": "HostIdentifier"
     },
-    "componentPrefix": {
+    "ModulePrefix": {
       "type": "derived",
-      "fileRename": "ModulePrefix",
       "replaces": "ModulePrefix",
       "valueSource": "name",
       "valueTransform": "extractName"
     },
-    "displayName": {
-      "type": "derived",
-      "valueSource": "name",
-      "replaces": "displayName",
-      "valueTransform": "nameToWords"
+    "ParentAdminModule": {
+      "type": "generated",
+      "generator": "join",
+      "replaces": "NewAdminModule",
+      "parameters": {
+        "symbols": [
+          {
+            "type": "ref",
+            "value": "ModulePrefix"
+          },
+          {
+            "type": "const",
+            "value": "AdminModule"
+          }
+        ],
+        "separator": "",
+        "removeEmptyValues": true
+      }
     },
-    "codeName": {
+    "DisplayName": {
       "type": "derived",
       "valueSource": "name",
-      "replaces": "codeName",
-      "valueTransform": "extractName"
+      "replaces": "DisplayName",
+      "valueTransform": "nameToWords"
     }
   },
   "forms": {

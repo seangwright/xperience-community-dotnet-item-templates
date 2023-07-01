@@ -5,7 +5,7 @@ using MySite.Admin.ModulePrefix;
     identifier: NewApplicationPage.IDENTIFIER,
     type: typeof(NewApplicationPage),
     slug: "slug",
-    name: "displayName",
+    name: "DisplayName",
     category: NewAdminModule.CATEGORY,
     icon: Icons.CustomElement,
     templateName: TemplateNames.SECTION_LAYOUT)]

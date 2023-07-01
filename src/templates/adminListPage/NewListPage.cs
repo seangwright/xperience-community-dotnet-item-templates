@@ -5,13 +5,15 @@ using MySite.Admin.ModulePrefix;
     parentType: typeof(NewApplicationPage),
     slug: "list",
     uiPageType: typeof(NewListPage),
-    name: "displayName",
+    name: "DisplayName",
     templateName: TemplateNames.SECTION_LAYOUT,
+    icon: Icons.CustomElement,
     order: 0)]
 
 namespace MySite.Admin.ModulePrefix;
 
 public class NewListPage : ListingPage
 {
-    protected override string ObjectType => "MyObjectInfo.OBJECT_TYPE";
+    // TODO replace with your object type reference
+    protected override string ObjectType => NewInfo.OBJECT_TYPE;
 }
