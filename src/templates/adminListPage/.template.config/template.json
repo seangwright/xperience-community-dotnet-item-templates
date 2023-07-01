@@ -1,0 +1,102 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Xperience Community",
+  "classifications": ["Web", "ASP.NET"],
+  "name": "Xperience Admin List Page",
+  "generatorVersions": "[1.0.0.0-*)",
+  "description": "Xperience by Kentico Admin List Page",
+  "tags": {
+    "language": "C#",
+    "type": "item"
+  },
+  "groupIdentity": "XperinceCommunity.Admin.ListPage",
+  "precedence": "10",
+  "identity": "XperienceCommunity.Admin.ListPage.26.3.0.0",
+  "shortName": "xpc-admin-application-page",
+  "sourceName": "NewListPage",
+  "primaryOutputs": [
+    {
+      "path": "ModulePrefix/NewListPage.cs"
+    },
+    {
+      "path": "ModulePrefix/NewListPage.cshtml"
+    }
+  ],
+  "defaultName": "NewListPage",
+  "preferNameDirectory": false,
+  "preferDefaultName": true,
+  "symbols": {
+    "namespace": {
+      "type": "generated",
+      "generator": "coalesce",
+      "replaces": "MyApp.Admin.ModulePrefix",
+      "parameters": {
+        "sourceVariableName": "IDENamespace",
+        "fallbackVariableName": "RootNamespace",
+        "defaultValue": "MyApp.Admin.ModulePrefixs"
+      }
+    },
+    "IDENamespace": {
+      "type": "bind",
+      "binding": "host:namespace",
+      "defaultValue": ""
+    },
+    "RootNamespace": {
+      "type": "bind",
+      "binding": "msbuild:RootNamespace",
+      "defaultValue": ""
+    },
+    "HostIdentifier": {
+      "type": "bind",
+      "binding": "HostIdentifier"
+    },
+    "componentPrefix": {
+      "type": "derived",
+      "fileRename": "ModulePrefix",
+      "replaces": "ModulePrefix",
+      "valueSource": "name",
+      "valueTransform": "extractName"
+    },
+    "displayName": {
+      "type": "derived",
+      "valueSource": "name",
+      "replaces": "displayName",
+      "valueTransform": "nameToWords"
+    },
+    "codeName": {
+      "type": "derived",
+      "valueSource": "name",
+      "replaces": "codeName",
+      "valueTransform": "extractName"
+    }
+  },
+  "forms": {
+    "extractName": {
+      "identifier": "replace",
+      "pattern": "^(\\w+)ListPage$",
+      "replacement": "$1"
+    },
+    "pascalToWords": {
+      "identifier": "replace",
+      "pattern": "(?<!^)(?=[A-Z])",
+      "replacement": " "
+    },
+    "nameToWords": {
+      "identifier": "chain",
+      "steps": ["extractName", "pascalToWords"]
+    }
+  },
+  "postActions": [
+    {
+      "id": "openInEditor",
+      "condition": "(HostIdentifier != \"dotnetcli\" && HostIdentifier != \"dotnetcli-preview\")",
+      "description": "Opens the created Admin List Page in the editor",
+      "manualInstructions": [],
+      "actionId": "84C0DA21-51C8-4541-9940-6CA19AF04EE6",
+      "args": {
+        "files": "0"
+      },
+      "continueOnError": true
+    }
+  ]
+}
