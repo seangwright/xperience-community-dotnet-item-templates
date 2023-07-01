@@ -1,5 +1,4 @@
 using System.Threading.Tasks;
-using Kentico.Xperience.Admin.Base;
 using Kentico.Xperience.Admin.Base.FormAnnotations;
 using Kentico.PageBuilder.Web.Mvc;
 using Microsoft.AspNetCore.Mvc;
@@ -11,7 +10,8 @@ using MyApp.Web.Components.Sections.ComponentPrefix;
     name: "displayName Section",
     propertiesType: typeof(NewSectionProperties),
     Description = "A displayName Section.",
-    IconClass = Icons.CustomElement)]
+    // https://devnet.kentico.com/docs/icon-list/index.html
+    IconClass = "icon-dialog-window-cogwheel")]
 
 namespace MyApp.Web.Components.Sections.ComponentPrefix;
 
