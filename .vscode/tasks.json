@@ -34,7 +34,7 @@
       "label": "dotnet: restore",
       "command": "dotnet",
       "type": "shell",
-      "args": ["restore", "src/src.sln"],
+      "args": ["restore"],
       "group": "build",
       "presentation": {
         "reveal": "silent"

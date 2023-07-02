@@ -18,7 +18,7 @@
     "editor.defaultFormatter": "DotJoshJohnson.xml"
   },
 
-  "dotnet.defaultSolution": "src\\src.sln",
+  "dotnet.defaultSolution": "XperienceCommunity.ItemTemplates.sln",
   "emmet.includeLanguages": {
     "aspnetcorerazor": "html"
   },
