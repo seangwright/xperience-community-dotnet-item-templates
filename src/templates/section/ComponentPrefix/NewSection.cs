@@ -2,22 +2,22 @@ using System.Threading.Tasks;
 using Kentico.Xperience.Admin.Base.FormAnnotations;
 using Kentico.PageBuilder.Web.Mvc;
 using Microsoft.AspNetCore.Mvc;
-using MyApp.Web.Components.Sections.ComponentPrefix;
+using MySite.Web.Components.Sections.ComponentPrefix;
 
 [assembly: RegisterSection(
     identifier: NewSection.IDENTIFIER,
     viewComponentType: typeof(NewSection),
-    name: "displayName Section",
+    name: "DisplayName",
     propertiesType: typeof(NewSectionProperties),
-    Description = "A displayName Section.",
+    Description = "A DisplayName Section.",
     // https://devnet.kentico.com/docs/icon-list/index.html
     IconClass = "icon-dialog-window-cogwheel")]
 
-namespace MyApp.Web.Components.Sections.ComponentPrefix;
+namespace MySite.Web.Components.Sections.ComponentPrefix;
 
 public class NewSection : ViewComponent
 {
-    public const string IDENTIFIER = "MyApp.Web.Components.Sections.NewSection";
+    public const string IDENTIFIER = "MySite.Web.Components.Sections.NewSection";
 
     public NewSection() { }
 

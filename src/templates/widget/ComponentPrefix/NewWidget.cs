@@ -2,24 +2,22 @@ using System.Threading.Tasks;
 using Kentico.Xperience.Admin.Base.FormAnnotations;
 using Kentico.PageBuilder.Web.Mvc;
 using Microsoft.AspNetCore.Mvc;
-using MyApp.Web.Components.Widgets.ComponentPrefix;
+using MySite.Web.Components.Widgets.ComponentPrefix;
 
 [assembly: RegisterWidget(
     identifier: NewWidget.IDENTIFIER,
     viewComponentType: typeof(NewWidget),
-    name: "displayName Widget",
+    name: "DisplayName",
     propertiesType: typeof(NewWidgetProperties),
-    Description = "A displayName Widget.",
+    Description = "A DisplayName Widget.",
     // https://devnet.kentico.com/docs/icon-list/index.html
     IconClass = "icon-dialog-window-cogwheel")]
 
-namespace MyApp.Web.Components.Widgets.ComponentPrefix;
+namespace MySite.Web.Components.Widgets.ComponentPrefix;
 
 public class NewWidget : ViewComponent
 {
-    public const string IDENTIFIER = "MyApp.Web.Components.Widgets.NewWidget";
-
-    public NewWidget() { }
+    public const string IDENTIFIER = "MySite.Web.Components.Widgets.NewWidget";
 
     public async Task<IViewComponentResult> InvokeAsync(ComponentViewModel<NewWidgetProperties> cvm)
     {

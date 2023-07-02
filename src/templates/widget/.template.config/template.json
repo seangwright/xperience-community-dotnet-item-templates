@@ -29,11 +29,11 @@
     "namespace": {
       "type": "generated",
       "generator": "coalesce",
-      "replaces": "MyApp.Web.Components.Widgets",
+      "replaces": "MySite.Web.Components.Widgets",
       "parameters": {
         "sourceVariableName": "IDENamespace",
         "fallbackVariableName": "RootNamespace",
-        "defaultValue": "MyApp.Web.Components.Widgets"
+        "defaultValue": "MySite.Web.Components.Widgets"
       }
     },
     "IDENamespace": {
@@ -50,17 +50,17 @@
       "type": "bind",
       "binding": "HostIdentifier"
     },
-    "componentPrefix": {
+    "ComponentPrefix": {
       "type": "derived",
       "fileRename": "ComponentPrefix",
       "replaces": "ComponentPrefix",
       "valueSource": "name",
       "valueTransform": "extractName"
     },
-    "displayName": {
+    "DisplayName": {
       "type": "derived",
       "valueSource": "name",
-      "replaces": "displayName",
+      "replaces": "DisplayName",
       "valueTransform": "nameToWords"
     }
   },

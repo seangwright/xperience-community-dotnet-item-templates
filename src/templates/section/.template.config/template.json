@@ -4,7 +4,7 @@
   "classifications": ["Web", "ASP.NET"],
   "name": "Xperience Page Builder Section",
   "generatorVersions": "[1.0.0.0-*)",
-  "description": "Xperience by Kentico Page Builder Section with Section Properties, View Model, and a Razor View",
+  "description": "Xperience by Kentico Page Builder Section with Properties, View Model, and a Razor View",
   "tags": {
     "language": "C#",
     "type": "item"
@@ -29,11 +29,11 @@
     "namespace": {
       "type": "generated",
       "generator": "coalesce",
-      "replaces": "MyApp.Web.Components.Sections",
+      "replaces": "MySite.Web.Components.Sections",
       "parameters": {
         "sourceVariableName": "IDENamespace",
         "fallbackVariableName": "RootNamespace",
-        "defaultValue": "MyApp.Web.Components.Sections"
+        "defaultValue": "MySite.Web.Components.Sections"
       }
     },
     "IDENamespace": {
@@ -50,17 +50,17 @@
       "type": "bind",
       "binding": "HostIdentifier"
     },
-    "componentPrefix": {
+    "ComponentPrefix": {
       "type": "derived",
       "fileRename": "ComponentPrefix",
       "replaces": "ComponentPrefix",
       "valueSource": "name",
       "valueTransform": "extractName"
     },
-    "displayName": {
+    "DisplayName": {
       "type": "derived",
       "valueSource": "name",
-      "replaces": "displayName",
+      "replaces": "DisplayName",
       "valueTransform": "nameToWords"
     }
   },
