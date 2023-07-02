@@ -6,6 +6,31 @@
 
 ![Using the Widget Item Template in Visual Studio](https://raw.githubusercontent.com/seangwright/xperience-community-dotnet-item-templates/main/images/xperience-widget-vs-template.webp)
 
+## Templates
+
+This package includes the following item templates
+
+### Admin
+
+- [Admin Application Page](https://docs.xperience.io/x/2gSiCQ)
+- [Admin Module](https://docs.xperience.io/xp/developers-and-admins/customization/extend-the-administration-interface/prepare-your-environment-for-admin-development#Prepareyourenvironmentforadmindevelopment-Renametheboilerplateproject)
+- [Admin Edit Page](https://docs.xperience.io/x/1IouCw)
+- [Admin Edit Section Page](https://docs.xperience.io/x/1IouCw)
+- [Admin List Page](https://docs.xperience.io/x/1oouCw)
+- [Admin Create Page](https://docs.xperience.io/xp/developers-and-admins/customization/extend-the-administration-interface/ui-pages/reference-ui-page-templates/edit-ui-page-template#EditUIpagetemplate-Useeditpagestocreatenewobjects)
+- [Admin Page Extender](https://docs.xperience.io/x/4gSiCQ)
+- [UI Form Component](https://docs.xperience.io/x/5ASiCQ)
+
+### Form Builder
+
+- [Form Component](https://docs.xperience.io/x/YIbWCQ)
+- [Form Section](https://docs.xperience.io/x/ZYbWCQ)
+
+### Page Builder
+
+- [Widget](https://docs.xperience.io/xp/developers-and-admins/development/builders/page-builder/widgets-for-page-builder#WidgetsforPageBuilder-Widgetsbasedonaviewcomponent)
+- [Section](https://docs.xperience.io/xp/developers-and-admins/development/builders/page-builder/sections-for-page-builder#SectionsforPageBuilder-Sectionsbasedonaviewcomponent)
+
 ## Building and Testing
 
 1. Make template changes
