@@ -2,7 +2,38 @@
 
 [![CI: Build and Test](https://github.com/seangwright/xperience-community-dotnet-item-templates/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/seangwright/xperience-community-dotnet-item-templates/actions/workflows/ci.yml)
 
+[![Release: Publish to NuGet](https://github.com/seangwright/xperience-community-dotnet-item-templates/actions/workflows/publish.yml/badge.svg?branch=main)](https://github.com/seangwright/xperience-community-dotnet-item-templates/actions/workflows/publish.yml)
+
 .NET CLI Item Templates for Xperience by Kentico projects, usable at the command line or in Visual Studio
+
+## Setup
+
+### Install
+
+[![NuGet Package](https://img.shields.io/nuget/v/XperienceCommunity.DotnetItemTemplates.svg)](https://www.nuget.org/packages/XperienceCommunity.DotnetItemTemplates)
+
+Install the `XperienceCommunity.DotnetItemTemplates` NuGet Template package globally:
+
+```bash
+dotnet new install XperienceCommunity.DotnetItemTemplates
+```
+
+### Use
+
+Use the templates in Visual Studio or at the command line:
+
+```bash
+dotnet new xpc-page-builder-widget -n HeroWidget -o .\MySite.Web\Components\Widgets
+```
+
+This will generate a new folder automatically: `.\MySite.Web\Components\Widgets\Hero` containing the following files:
+
+- `HeroWidget.cs`
+- `Hero.cshtml`
+
+To view the list of all the templates that are installed with this package run `dotnet new list` at the command line.
+
+## Screenshots
 
 ![Visual Studio new item dialog](https://raw.githubusercontent.com/seangwright/xperience-community-dotnet-item-templates/main/images/vs-new-item-dialog.jpg)
 
