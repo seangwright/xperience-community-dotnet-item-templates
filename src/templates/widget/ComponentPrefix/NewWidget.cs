@@ -41,10 +41,7 @@ public class NewWidgetProperties : IWidgetProperties
 
 public class NewWidgetViewModel
 {
-    public NewWidgetViewModel(NewWidgetProperties props)
-    {
-        Label = props.Label;
-    }
+    public NewWidgetViewModel(NewWidgetProperties props) => Label = props.Label;
 
     public string Label { get; } = "";
 }
