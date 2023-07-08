@@ -1,5 +1,7 @@
 # Xperience Community: .NET Item Templates
 
+[![CI: Build and Test](https://github.com/seangwright/xperience-community-dotnet-item-templates/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/seangwright/xperience-community-dotnet-item-templates/actions/workflows/ci.yml)
+
 .NET CLI Item Templates for Xperience by Kentico projects, usable at the command line or in Visual Studio
 
 ![Visual Studio new item dialog](https://raw.githubusercontent.com/seangwright/xperience-community-dotnet-item-templates/main/images/vs-new-item-dialog.jpg)
@@ -50,7 +52,7 @@ Run the `templates: reinstall` VS Code task, which will perform all the manual s
 1. Run the `dotnet: install template` VS Code task to install the locally packaged template (use the correct version number when prompted)
 1. Open VS and test the templates on an ASP.NET Core or class library project
 
-## Contributing
+## Notes
 
 - [Exposing Item Tempaltes in VS](https://github.com/dotnet/templating/issues/4686#issuecomment-1591202127)
   - [Example VS compatible item template](https://github.com/dotnet/maui/blob/main/src/Templates/src/templates/maui-contentpage-csharp/.template.config/ide.host.json)
@@ -58,3 +60,9 @@ Run the `templates: reinstall` VS Code task, which will perform all the manual s
 - [Guidance on authoring .NET CLI templates](https://github.com/sayedihashimi/template-sample)
 - [Templating repo and wiki](https://github.com/dotnet/templating/)
 - [Example templates for ASP.NET Core](https://github.com/dotnet/aspnetcore/blob/main/src/ProjectTemplates/Web.ItemTemplates/content/ViewStart/.template.config/template.json)
+
+## Contributions
+
+If you discover a problem, please [open an issue](https://github.com/seangwright/xperience-community-dotnet-item-templates/issues/new).
+
+If you would like contribute to the code or documentation, please [open a pull request](https://github.com/seangwright/xperience-community-dotnet-item-templates/compare).
