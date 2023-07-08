@@ -2,24 +2,21 @@
   "$schema": "http://json.schemastore.org/template",
   "author": "Xperience Community",
   "classifications": ["Web", "ASP.NET"],
-  "name": "Xperience UI Form Component",
+  "name": "Xperience Admin UI Form Component",
   "generatorVersions": "[1.0.0.0-*)",
-  "description": "Xperience by Kentico UI Form Component with client Properties, an Attribute, and a client React Component",
+  "description": "Xperience by Kentico Admin UI Form Component with client Properties, an Attribute",
   "tags": {
     "language": "C#",
     "type": "item"
   },
-  "groupIdentity": "XperinceCommunity.PageBuilder.UIFormComponent",
+  "groupIdentity": "XperinceCommunity.Admin.UIFormComponent",
   "precedence": "10",
-  "identity": "XperienceCommunity.PageBuilder.UIFormComponent.26.3.0.0",
-  "shortName": "xpc-ui-form-component",
+  "identity": "XperienceCommunity.Admin.UIFormComponent.26.3.0.0",
+  "shortName": "xpc-admin-ui-form-component",
   "sourceName": "NewFormComponent",
   "primaryOutputs": [
     {
-      "path": "ComponentPrefix/NewFormComponent.cs"
-    },
-    {
-      "path": "ComponentPrefix/NewFormComponent.tsx"
+      "path": "NewFormComponent.cs"
     }
   ],
   "defaultName": "NewFormComponent",
@@ -29,11 +26,11 @@
     "namespace": {
       "type": "generated",
       "generator": "coalesce",
-      "replaces": "MyApp.Web.Components.UIFormComponents",
+      "replaces": "MySite.Admin.UIFormComponents",
       "parameters": {
         "sourceVariableName": "IDENamespace",
         "fallbackVariableName": "RootNamespace",
-        "defaultValue": "MyApp.Web.Components.UIFormComponents"
+        "defaultValue": "MySite.Admin.UIFormComponents"
       }
     },
     "IDENamespace": {
@@ -50,17 +47,17 @@
       "type": "bind",
       "binding": "HostIdentifier"
     },
-    "componentPrefix": {
+    "ComponentPrefix": {
       "type": "derived",
       "fileRename": "ComponentPrefix",
       "replaces": "ComponentPrefix",
       "valueSource": "name",
       "valueTransform": "extractName"
     },
-    "displayName": {
+    "DisplayName": {
       "type": "derived",
       "valueSource": "name",
-      "replaces": "displayName",
+      "replaces": "DisplayName",
       "valueTransform": "nameToWords"
     }
   },

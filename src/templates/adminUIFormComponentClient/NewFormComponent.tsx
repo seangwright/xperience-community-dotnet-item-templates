@@ -2,7 +2,11 @@ import React, { ChangeEventHandler, useState } from "react";
 import { FormComponentProps } from "@kentico/xperience-admin-base";
 import { FormItemWrapper } from "@kentico/xperience-admin-components";
 
-export const NewUIFormComponent = (props: FormComponentProps) => {
+export interface NewFormComponentProps extends FormComponentProps {
+  placeholderText: string;
+}
+
+export const NewFormComponent = (props: NewFormComponentProps) => {
   const handleOnChange: ChangeEventHandler = (value) => {
     if (props.onChange) {
       props.onChange(value);
@@ -19,7 +23,11 @@ export const NewUIFormComponent = (props: FormComponentProps) => {
       labelIcon={props.tooltip ? "xp-i-circle" : undefined}
       labelIconTooltip={props.tooltip}
     >
-      <input value={props.value} onChange={handleOnChange} />
+      <input
+        value={props.value}
+        onChange={handleOnChange}
+        placeholder={props.placeholderText}
+      />
     </FormItemWrapper>
   );
 };

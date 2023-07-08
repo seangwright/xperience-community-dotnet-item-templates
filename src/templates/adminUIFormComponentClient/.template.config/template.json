@@ -1,0 +1,44 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Xperience Community",
+  "classifications": ["Web", "TypeScript"],
+  "name": "Xperience Admin UI Form Component (TSX)",
+  "generatorVersions": "[1.0.0.0-*)",
+  "description": "Xperience by Kentico UI Form Component client React Component",
+  "tags": {
+    "language": "TypeScript",
+    "type": "item"
+  },
+  "groupIdentity": "XperinceCommunity.PageBuilder.UIFormComponent",
+  "precedence": "10",
+  "identity": "XperienceCommunity.PageBuilder.UIFormComponentClient.26.3.0.0",
+  "shortName": "xpc-admin-ui-form-component-client",
+  "sourceName": "NewFormComponent",
+  "primaryOutputs": [
+    {
+      "path": "NewFormComponent.tsx"
+    }
+  ],
+  "defaultName": "NewFormComponent",
+  "preferNameDirectory": false,
+  "preferDefaultName": true,
+  "symbols": {
+    "HostIdentifier": {
+      "type": "bind",
+      "binding": "HostIdentifier"
+    }
+  },
+  "postActions": [
+    {
+      "id": "openInEditor",
+      "condition": "(HostIdentifier != \"dotnetcli\" && HostIdentifier != \"dotnetcli-preview\")",
+      "description": "Opens the created UI Form Component in the editor",
+      "manualInstructions": [],
+      "actionId": "84C0DA21-51C8-4541-9940-6CA19AF04EE6",
+      "args": {
+        "files": "0"
+      },
+      "continueOnError": true
+    }
+  ]
+}
