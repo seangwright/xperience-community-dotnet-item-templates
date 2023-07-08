@@ -9,9 +9,9 @@
     "language": "TypeScript",
     "type": "item"
   },
-  "groupIdentity": "XperinceCommunity.PageBuilder.UIFormComponent",
+  "groupIdentity": "XperinceCommunity.Admin.UIFormComponent",
   "precedence": "10",
-  "identity": "XperienceCommunity.PageBuilder.UIFormComponentClient.26.3.0.0",
+  "identity": "XperienceCommunity.Admin.UIFormComponentClient.26.3.0.0",
   "shortName": "xpc-admin-ui-form-component-client",
   "sourceName": "NewFormComponent",
   "primaryOutputs": [
