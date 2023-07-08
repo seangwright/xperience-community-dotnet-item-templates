@@ -6,6 +6,8 @@
 
 .NET CLI Item Templates for Xperience by Kentico projects, usable at the command line or in Visual Studio
 
+These templates are setup for [Xperience by Kentico v26.3.0](https://docs.xperience.io/xp/changelog#Changelog-Refresh(June15,2023))
+
 ## Setup
 
 ### Install
@@ -16,6 +18,12 @@ Install the `XperienceCommunity.DotnetItemTemplates` NuGet Template package glob
 
 ```bash
 dotnet new install XperienceCommunity.DotnetItemTemplates
+```
+
+Or, update the templates to the latest version if you already have them installed
+
+```bash
+dotnet new update
 ```
 
 ### Use
