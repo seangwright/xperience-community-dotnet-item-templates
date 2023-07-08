@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <PackageType>Template</PackageType>
-    <PackageVersion>1.0</PackageVersion>
+    <PackageVersion>1.0.0</PackageVersion>
     <PackageId>XperienceCommunity.DotnetItemTemplates</PackageId>
     <Title>Xperience Community - .NET Item Templates</Title>
     <Authors>Sean G. Wright</Authors>
