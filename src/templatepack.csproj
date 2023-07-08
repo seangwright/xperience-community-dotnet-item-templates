@@ -5,7 +5,7 @@
     <Copyright>Copyright © $(Company) $([System.DateTime]::Now.Year)</Copyright>
     <Trademark>$(Company)™</Trademark>
 
-    <VersionPrefix>1.0.1</VersionPrefix>
+    <VersionPrefix>1.0.2</VersionPrefix>
     <Product>XperienceCommunity.DotnetItemTemplates</Product>
     <PackageId>XperienceCommunity.DotnetItemTemplates</PackageId>
     <PackageIcon>content/templates/images/icon.png</PackageIcon>
