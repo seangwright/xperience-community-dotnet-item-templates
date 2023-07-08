@@ -19,7 +19,7 @@
       "path": "ComponentPrefix/NewFormComponent.cs"
     },
     {
-      "path": "ComponentPrefix/NewFormComponent.cshtml"
+      "path": "ComponentPrefix/ComponentPrefix.cshtml"
     }
   ],
   "defaultName": "NewFormComponent",
