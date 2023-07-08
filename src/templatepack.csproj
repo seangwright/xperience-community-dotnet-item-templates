@@ -1,14 +1,22 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
-    <PackageType>Template</PackageType>
-    <PackageVersion>1.0.0</PackageVersion>
+    <Company>Sean G. Wright</Company>
+    <Authors>$(Company)</Authors>
+    <Copyright>Copyright © $(Company) $([System.DateTime]::Now.Year)</Copyright>
+    <Trademark>$(Company)™</Trademark>
+
+    <VersionPrefix>1.0.0</VersionPrefix>
+    <Product>XperienceCommunity.DotnetItemTemplates</Product>
     <PackageId>XperienceCommunity.DotnetItemTemplates</PackageId>
-    <PackageReadmeFile>README.md</PackageReadmeFile>
-    <Title>Xperience Community - .NET Item Templates</Title>
-    <Authors>Sean G. Wright</Authors>
+    <PackageIcon>content/templates/images/icon.png</PackageIcon>
     <Description>.NET CLI Item Templates for Xperience by Kentico projects, usable at the command line or in Visual Studio</Description>
-    <PackageTags>dotnet-new;templates;xperience-by-kentico;xperience</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <Title>$(Product)</Title>
+    <PackageProjectUrl>https://github.com/seangwright/xperience-community-dotnet-item-templates</PackageProjectUrl>
+    <PackageReleaseNotes>https://github.com/seangwright/xperience-community-dotnet-item-templates/releases</PackageReleaseNotes>
+    <PackageTags>dotnet-new;templates;xperience-by-kentico;xperience;kentico</PackageTags>
+    <PackageType>Template</PackageType>
 
     <TargetFramework>netstandard2.0</TargetFramework>
 
@@ -27,13 +35,16 @@
     <Content Remove="templates\**\*.csproj" />
     <Content Remove="templates\**\_ViewImports.cshtml" />
 
-    <Content Remove="templates\**\package.json;templates\**\package-lock.json" />
-    <Content Remove="templates\**\babel.config.json;templates\**\tsconfig.json" />
+    <Content
+      Remove="templates\**\package.json;templates\**\package-lock.json"
+    />
+    <Content
+      Remove="templates\**\babel.config.json;templates\**\tsconfig.json"
+    />
     <Content Remove="templates\**\node_modules\**" />
 
     <Compile Remove="**\*" />
 
     <None Include="README.md" Pack="true" PackagePath="\" />
   </ItemGroup>
-
 </Project>
