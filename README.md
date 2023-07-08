@@ -20,6 +20,8 @@ This package includes the following item templates
 - [Admin Create Page](https://docs.xperience.io/xp/developers-and-admins/customization/extend-the-administration-interface/ui-pages/reference-ui-page-templates/edit-ui-page-template#EditUIpagetemplate-Useeditpagestocreatenewobjects)
 - [Admin Page Extender](https://docs.xperience.io/x/4gSiCQ)
 - [UI Form Component](https://docs.xperience.io/x/5ASiCQ)
+- [Validation Rule](https://docs.xperience.io/x/6QSiCQ)
+- [Validation Rule (TypeScript)](https://docs.xperience.io/xp/developers-and-admins/customization/extend-the-administration-interface/ui-form-components/ui-form-component-validation-rules#UIformcomponentvalidationrules-Validationrulefrontend)
 
 ### Form Builder
 

@@ -1,0 +1,60 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Xperience Community",
+  "classifications": ["Web", "TypeScript"],
+  "name": "Xperience Validation Rule (TypeScript)",
+  "generatorVersions": "[1.0.0.0-*)",
+  "description": "Xperience by Kentico Validation Rule Front end validation function in TypeScript",
+  "tags": {
+    "language": "TypeScript",
+    "type": "item"
+  },
+  "groupIdentity": "XperinceCommunity.Admin.ValidationRule",
+  "precedence": "10",
+  "identity": "XperienceCommunity.Admin.ValidationRuleClient.26.3.0.0",
+  "shortName": "xpc-validation-rule-client",
+  "sourceName": "NewValidationRule",
+  "primaryOutputs": [
+    {
+      "path": "NewValidationRule.ts"
+    }
+  ],
+  "defaultName": "NewValidationRule",
+  "preferNameDirectory": false,
+  "preferDefaultName": true,
+  "symbols": {
+    "HostIdentifier": {
+      "type": "bind",
+      "binding": "HostIdentifier"
+    }
+  },
+  "forms": {
+    "extractName": {
+      "identifier": "replace",
+      "pattern": "^(\\w+)ValidationRule$",
+      "replacement": "$1"
+    },
+    "pascalToWords": {
+      "identifier": "replace",
+      "pattern": "(?<!^)(?=[A-Z])",
+      "replacement": " "
+    },
+    "nameToWords": {
+      "identifier": "chain",
+      "steps": ["extractName", "pascalToWords"]
+    }
+  },
+  "postActions": [
+    {
+      "id": "openInEditor",
+      "condition": "(HostIdentifier != \"dotnetcli\" && HostIdentifier != \"dotnetcli-preview\")",
+      "description": "Opens the created Validation Rule in the editor",
+      "manualInstructions": [],
+      "actionId": "84C0DA21-51C8-4541-9940-6CA19AF04EE6",
+      "args": {
+        "files": "0"
+      },
+      "continueOnError": true
+    }
+  ]
+}
