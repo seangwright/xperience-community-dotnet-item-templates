@@ -1,33 +1,35 @@
-name: 'Pack and Publish'
+name: "Pack and Publish"
 
-description: 'Packs and publishes a .NET Library as a build artifact'
+description: "Packs and publishes a .NET Library as a build artifact"
 
 inputs:
   projectPath:
-    description: 'Path to the project file'
+    description: "Path to the project file"
     required: true
   preReleaseVersion:
-    description: 'The pre-release version to use for the NuGet package'
+    description: "The pre-release version to use for the NuGet package"
     required: true
 
 runs:
   using: composite
   steps:
     - name: Create PreRelease Artifact
-      run: dotnet pack ${{ inputs.projectPath }} -c Release --no-build --include-symbols -o ./artifacts/prerelease --version-suffix prerelease-${{ inputs.preReleaseVersion }}
+      run: |
+        cp ./README.md ./src
+        dotnet pack ${{ inputs.projectPath }} -c Release -o ./artifacts/prerelease --version-suffix prerelease-${{ inputs.preReleaseVersion }}
       shell: pwsh
 
-    - name: 'Save prerelease artifact'
+    - name: "Save prerelease artifact"
       uses: actions/upload-artifact@v3
       with:
         name: prerelease
         path: ./artifacts/prerelease/*
 
     - name: Create Release Artifact
-      run: dotnet pack ${{ inputs.projectPath }} -c Release --no-build --include-symbols -o ./artifacts/release
+      run: dotnet pack ${{ inputs.projectPath }} -c Release -o ./artifacts/release
       shell: pwsh
 
-    - name: 'Save release artifact'
+    - name: "Save release artifact"
       uses: actions/upload-artifact@v3
       with:
         name: release

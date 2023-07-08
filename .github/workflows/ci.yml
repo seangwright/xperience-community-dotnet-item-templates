@@ -41,4 +41,7 @@ jobs:
         run: dotnet test --configuration Release --no-build --no-restore
 
       - name: Build Package
-        run: dotnet build src/templatepack.csproj
+        run: |
+          cp ./README.md ./src
+          dotnet pack ./src/templatepack.csproj -o ./
+        shell: pwsh

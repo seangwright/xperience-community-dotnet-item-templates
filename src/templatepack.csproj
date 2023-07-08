@@ -4,6 +4,7 @@
     <PackageType>Template</PackageType>
     <PackageVersion>1.0.0</PackageVersion>
     <PackageId>XperienceCommunity.DotnetItemTemplates</PackageId>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
     <Title>Xperience Community - .NET Item Templates</Title>
     <Authors>Sean G. Wright</Authors>
     <Description>.NET CLI Item Templates for Xperience by Kentico projects, usable at the command line or in Visual Studio</Description>
@@ -31,6 +32,8 @@
     <Content Remove="templates\**\node_modules\**" />
 
     <Compile Remove="**\*" />
+
+    <None Include="README.md" Pack="true" PackagePath="\" />
   </ItemGroup>
 
 </Project>
