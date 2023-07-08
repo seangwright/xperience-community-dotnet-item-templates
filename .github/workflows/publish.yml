@@ -30,6 +30,9 @@ jobs:
       - name: Test Solution
         run: dotnet test --configuration Release --no-build --no-restore
 
+      - name: Build Package
+        run: dotnet build src/templatepack.csproj
+
       - name: "Pack and Publish"
         uses: ./.github/actions/pack-and-publish
         with:

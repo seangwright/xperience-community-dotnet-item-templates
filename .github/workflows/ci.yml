@@ -1,22 +1,22 @@
-name: 'CI: Build and Test'
+name: "CI: Build and Test"
 
 on:
   push:
     branches: [main]
     paths:
-      - '**.cs'
-      - '**.csproj'
-      - '**.props'
-      - '**.targets'
-      - '**.sln'
+      - "**.cs"
+      - "**.csproj"
+      - "**.props"
+      - "**.targets"
+      - "**.sln"
   pull_request:
     branches: [main]
     paths:
-      - '**.cs'
-      - '**.csproj'
-      - '**.props'
-      - '**.targets'
-      - '**.sln'
+      - "**.cs"
+      - "**.csproj"
+      - "**.props"
+      - "**.targets"
+      - "**.sln"
 
 jobs:
   build:
@@ -39,3 +39,6 @@ jobs:
 
       - name: Test Solution
         run: dotnet test --configuration Release --no-build --no-restore
+
+      - name: Build Package
+        run: dotnet build src/templatepack.csproj
