@@ -41,30 +41,174 @@ To view the list of all the templates that are installed with this package run `
 
 ## Templates
 
-This package includes the following item templates
+This package includes the following item templates.
+
+### Required Suffix
+
+**Note**: Each template has a required suffix for the name of the item you are scaffolding. You can use any name you want as long as you include the suffix at the end of the name.
 
 ### Admin
 
-- [Admin Application Page](https://docs.xperience.io/x/2gSiCQ)
 - [Admin Module](https://docs.xperience.io/xp/developers-and-admins/customization/extend-the-administration-interface/prepare-your-environment-for-admin-development#Prepareyourenvironmentforadmindevelopment-Renametheboilerplateproject)
+
+  - Required suffix `AdminModule`
+
+    `dotnet new xpc-admin-module -n AppleAdminModule -o .\App.Admin\Apples`
+
+  - Generates
+
+    `.\App.Admin\Apples\AppleAdminModule.cs`
+
+- [Admin Application Page](https://docs.xperience.io/x/2gSiCQ)
+  - Required suffix `ApplicationPage`
+  
+    `dotnet new xpc-admin-application-page -n AppleApplicationPage -o .\App.Admin\Apples`
+
+  - Generates
+
+    `.\App.Admin\Apples\AppleApplicationPage.cs`
+
 - [Admin Edit Page](https://docs.xperience.io/x/1IouCw)
+
+  - Required suffix `EditPage`
+
+    `dotnet new xpc-admin-edit-page -n AppleEditPage -o .\App.Admin\Apples`
+
+  - Generates
+
+    `.\App.Admin\Apples\AppleEditPage.cs`
+
 - [Admin Edit Section Page](https://docs.xperience.io/x/1IouCw)
+
+  - Required suffix `EditSectionPage`
+
+    `dotnet new xpc-admin-edit-section-page -n AppleEditSectionPage -o .\App.Admin\Apples`
+
+  - Generates
+
+    `.\App.Admin\Apples\AppleEditSectionPage.cs`  
+
 - [Admin List Page](https://docs.xperience.io/x/1oouCw)
+
+  - Required suffix `ListPage`
+
+    `dotnet new xpc-admin-list-page -n AppleListPage -o .\App.Admin\Apples`
+
+  - Generates
+
+    `.\App.Admin\Apples\AppleListPage.cs`
+
 - [Admin Create Page](https://docs.xperience.io/xp/developers-and-admins/customization/extend-the-administration-interface/ui-pages/reference-ui-page-templates/edit-ui-page-template#EditUIpagetemplate-Useeditpagestocreatenewobjects)
+
+  - Required suffix `CreatePage`
+
+    `dotnet new xpc-admin-create-page -n AppleCreatePage -o .\App.Admin\Apples`
+
+  - Generates
+
+    `.\App.Admin\Apples\AppleCreatePage.cs`
+
 - [Admin Page Extender](https://docs.xperience.io/x/4gSiCQ)
-- [UI Form Component](https://docs.xperience.io/x/5ASiCQ)
+
+  - Required suffix `PageExtender`
+
+    `dotnet new xpc-admin-page-extender -n ApplePageExtender -o .\App.Admin\Apples`
+
+  - Generates
+
+    `.\App.Admin\Apples\ApplePageExtender.cs`
+
+- [Admin UI Form Component](https://docs.xperience.io/x/5ASiCQ)
+
+  - Required suffix `FormComponent`
+
+    `dotnet new xpc-admin-ui-form-component -n AppleFormComponent -o .\App.Admin\Apples`
+
+  - Generates
+
+    `.\App.Admin\Apples\AppleFormcomponent.cs`
+
+- [Admin UI Form Component (TSX))](https://docs.xperience.io/xp/developers-and-admins/customization/extend-the-administration-interface/ui-form-components#UIformcomponents-Formcomponentfrontend)
+
+  - Required suffix `FormComponent`
+
+    `dotnet new xpc-admin-ui-form-component-client -n AppleFormComponent -o .\App.Admin\Client\src\apples`
+
+  - Generates
+
+    `.\App.Admin\Client\src\apples\AppleFormComponent.tsx`
+
 - [Validation Rule](https://docs.xperience.io/x/6QSiCQ)
+
+  - Required suffix `ValidationRule`
+
+    `dotnet new xpc-admin-validation-rule -n FreshAppleValidationRule -o .\App.Admin\Apples`
+
+  - Generates
+
+    `.\App.Admin\Apples\FreshAppleValidationRule.cs`
+
 - [Validation Rule (TypeScript)](https://docs.xperience.io/xp/developers-and-admins/customization/extend-the-administration-interface/ui-form-components/ui-form-component-validation-rules#UIformcomponentvalidationrules-Validationrulefrontend)
+
+  - Required suffix `ValidationRule`
+
+    `dotnet new xpc-admin-validation-rule-client -n AppleValidationRule -o .\App.Admin\Client\src\apples`
+
+  - Generates
+
+    `.\App.Admin\Client\src\apples\AppleValidationRule.tsx`
 
 ### Form Builder
 
 - [Form Component](https://docs.xperience.io/x/YIbWCQ)
+
+  - Required suffix `FormComponent`
+
+    `dotnet new xpc-form-builder-form-component -n AppleFormComponent -o .\App.Web\Components\FormComponents`
+
+  - Generates
+
+    `.\App.Web\Components\FormComponents\Apple\AppleFormComponent.cs`
+
+    `.\App.Web\Components\FormComponents\Apple\Apple.cshtml`
+
 - [Form Section](https://docs.xperience.io/x/ZYbWCQ)
+
+  - Required suffix `FormSection`
+
+    `dotnet new xpc-form-builder-form-section -n AppleFormSection -o .\App.Web\Components\FormSections`
+
+  - Generates
+
+    `.\App.Web\Components\FormSections\Apple\AppleFormSection.cs`
+
+    `.\App.Web\Components\FormSections\Apple\Apple.cshtml`
 
 ### Page Builder
 
 - [Widget](https://docs.xperience.io/xp/developers-and-admins/development/builders/page-builder/widgets-for-page-builder#WidgetsforPageBuilder-Widgetsbasedonaviewcomponent)
+
+  - Required suffix `Widget`
+
+    `dotnet new xpc-page-builder-widget -n AppleWidget -o .\App.Web\Components\Widgets`
+
+  - Generates
+
+    `.\App.Web\Components\Widgets\Apple\AppleWidget.cs`
+
+    `.\App.Web\Components\Widgets\Apple\Apple.cshtml`
+
 - [Section](https://docs.xperience.io/xp/developers-and-admins/development/builders/page-builder/sections-for-page-builder#SectionsforPageBuilder-Sectionsbasedonaviewcomponent)
+
+  - Required suffix `Section`
+
+    `dotnet new xpc-page-builder-section -n AppleSection -o .\App.Web\Components\Sections`
+
+  - Generates
+
+    `.\App.Web\Components\Sections\Apple\AppleSection.cs`
+
+    `.\App.Web\Components\Sections\Apple\Apple.cshtml`
 
 ## Building and Testing
 
