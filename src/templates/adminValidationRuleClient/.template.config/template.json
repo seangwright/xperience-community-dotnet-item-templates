@@ -2,7 +2,7 @@
   "$schema": "http://json.schemastore.org/template",
   "author": "Xperience Community",
   "classifications": ["Web", "TypeScript"],
-  "name": "Xperience Validation Rule (TypeScript)",
+  "name": "Xperience Admin Validation Rule (TypeScript)",
   "generatorVersions": "[1.0.0.0-*)",
   "description": "Xperience by Kentico Validation Rule Front end validation function in TypeScript",
   "tags": {
@@ -12,7 +12,7 @@
   "groupIdentity": "XperinceCommunity.Admin.ValidationRule",
   "precedence": "10",
   "identity": "XperienceCommunity.Admin.ValidationRuleClient.26.3.0.0",
-  "shortName": "xpc-validation-rule-client",
+  "shortName": "xpc-admin-validation-rule-client",
   "sourceName": "NewValidationRule",
   "primaryOutputs": [
     {
@@ -26,22 +26,6 @@
     "HostIdentifier": {
       "type": "bind",
       "binding": "HostIdentifier"
-    }
-  },
-  "forms": {
-    "extractName": {
-      "identifier": "replace",
-      "pattern": "^(\\w+)ValidationRule$",
-      "replacement": "$1"
-    },
-    "pascalToWords": {
-      "identifier": "replace",
-      "pattern": "(?<!^)(?=[A-Z])",
-      "replacement": " "
-    },
-    "nameToWords": {
-      "identifier": "chain",
-      "steps": ["extractName", "pascalToWords"]
     }
   },
   "postActions": [

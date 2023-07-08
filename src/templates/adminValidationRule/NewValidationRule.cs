@@ -22,10 +22,7 @@ public class NewValidationRule : ValidationRule<NewValidationRuleProperties, New
 
     public override string ClientRuleName => "@MySite.Admin/NewValidationRule";
 
-    public NewValidationRule(ILocalizationService localizer)
-    {
-        this.localizer = localizer;
-    }
+    public NewValidationRule(ILocalizationService localizer) => this.localizer = localizer;
 
     public override Task<ValidationResult> Validate(string value, IFormFieldValueProvider formFieldValueProvider)
     {
@@ -37,10 +34,8 @@ public class NewValidationRule : ValidationRule<NewValidationRuleProperties, New
         return ValidationResult.SuccessResult();
     }
 
-    protected override Task ConfigureClientProperties(NewValidationRuleClientProperties clientProperties)
-    {
-        return base.ConfigureClientProperties(clientProperties);
-    }
+    protected override Task ConfigureClientProperties(NewValidationRuleClientProperties clientProperties) =>
+        base.ConfigureClientProperties(clientProperties);
 }
 
 public class NewValidationRuleProperties : ValidationRuleProperties
@@ -52,10 +47,7 @@ public class NewValidationRuleProperties : ValidationRuleProperties
         Order = 1)]
     public string Value { get; set; }
 
-    public override string GetDescriptionText(ILocalizationService localizationService)
-    {
-        return "";
-    }
+    public override string GetDescriptionText(ILocalizationService localizationService) => "";
 }
 
 public class NewValidationRuleClientProperties : ValidationRuleClientProperties
@@ -65,10 +57,11 @@ public class NewValidationRuleClientProperties : ValidationRuleClientProperties
 
 public class NewValidationRuleAttribute : ValidationRuleAttribute
 {
-    public NewValidationRuleAttribute(string value)
-    {
-        Value = value;
-    }
+    public NewValidationRuleAttribute(string value) => Value = value;
 
+    // This property name must match the NewValidationRuleProperties.Value
+    // in both name and type exactly for the value to be mapped to the rule
+    // properties correctly
+    // See: https://docs.xperience.io/xp/developers-and-admins/customization/extend-the-administration-interface/ui-form-components/ui-form-component-validation-rules#UIformcomponentvalidationrules-Assignvalidationrulesusingattributes
     public string Value { get; set; }
 }

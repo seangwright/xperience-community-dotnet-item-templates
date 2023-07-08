@@ -2,9 +2,9 @@
   "$schema": "http://json.schemastore.org/template",
   "author": "Xperience Community",
   "classifications": ["Web", "ASP.NET"],
-  "name": "Xperience Validation Rule",
+  "name": "Xperience Admin Validation Rule",
   "generatorVersions": "[1.0.0.0-*)",
-  "description": "Xperience by Kentico Validation Rule with Properties, Client Properties, and Attribute",
+  "description": "Xperience by Kentico Admin Validation Rule with Properties, Client Properties, and Attribute",
   "tags": {
     "language": "C#",
     "type": "item"
@@ -12,7 +12,7 @@
   "groupIdentity": "XperinceCommunity.Admin.ValidationRule",
   "precedence": "10",
   "identity": "XperienceCommunity.Admin.ValidationRule.26.3.0.0",
-  "shortName": "xpc-validation-rule",
+  "shortName": "xpc-admin-validation-rule",
   "sourceName": "NewValidationRule",
   "primaryOutputs": [
     {
