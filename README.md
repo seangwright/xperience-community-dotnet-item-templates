@@ -35,6 +35,12 @@ This package includes the following item templates
 
 ## Building and Testing
 
+### Automated
+
+Run the `templates: reinstall` VS Code task, which will perform all the manual steps below
+
+### Manual
+
 1. Make template changes
 1. Run the `dotnet: build` VS Code task to ensure the template changes compile
 1. Run the `dotnet: pack` VS Code task to package the templates
