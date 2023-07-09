@@ -12,7 +12,7 @@
   "groupIdentity": "XperinceCommunity.Admin.UIFormComponent",
   "precedence": "10",
   "identity": "XperienceCommunity.Admin.UIFormComponentClient.26.3.0.0",
-  "shortName": "xpc-admin-ui-form-component-client",
+  "shortName": "xpc-admin-ui-form-component",
   "sourceName": "NewFormComponent",
   "primaryOutputs": [
     {

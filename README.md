@@ -140,7 +140,7 @@ This package includes the following item templates.
 
   - Required suffix `FormComponent`
 
-    `dotnet new xpc-admin-ui-form-component-client -n AppleFormComponent -o .\App.Admin\Client\src\apples`
+    `dotnet new xpc-admin-ui-form-component -lang TypeScript -n AppleFormComponent -o .\App.Admin\Client\src\apples`
 
   - Generates
 
@@ -160,7 +160,7 @@ This package includes the following item templates.
 
   - Required suffix `ValidationRule`
 
-    `dotnet new xpc-admin-validation-rule-client -n AppleValidationRule -o .\App.Admin\Client\src\apples`
+    `dotnet new xpc-admin-validation-rule -lang TypeScript -n AppleValidationRule -o .\App.Admin\Client\src\apples`
 
   - Generates
 
