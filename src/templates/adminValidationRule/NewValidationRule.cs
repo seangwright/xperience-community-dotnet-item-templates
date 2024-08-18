@@ -62,6 +62,6 @@ public class NewValidationRuleAttribute : ValidationRuleAttribute
     // This property name must match the NewValidationRuleProperties.Value
     // in both name and type exactly for the value to be mapped to the rule
     // properties correctly
-    // See: https://docs.xperience.io/xp/developers-and-admins/customization/extend-the-administration-interface/ui-form-components/ui-form-component-validation-rules#UIformcomponentvalidationrules-Assignvalidationrulesusingattributes
+    // See: https://docs.kentico.com/developers-and-admins/customization/extend-the-administration-interface/ui-form-components/ui-form-component-validation-rules#UIformcomponentvalidationrules-Assignvalidationrulesusingattributes
     public string Value { get; set; }
 }

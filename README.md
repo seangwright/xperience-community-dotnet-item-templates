@@ -6,7 +6,9 @@
 
 .NET CLI Item Templates for Xperience by Kentico projects, usable at the command line or in Visual Studio
 
-These templates are setup for [Xperience by Kentico v26.3.0](https://docs.xperience.io/xp/changelog#Changelog-Refresh(June15,2023))
+These templates have been tested up to [Xperience by Kentico v29.3.3](https://docs.kentico.com/changelog#hotfix-august-15-2024).
+
+> Note: the templates might work on earlier versions of Xperience, but have only been tested for the version above.
 
 ## Setup
 
@@ -57,7 +59,7 @@ This package includes the following item templates.
 
 ### Admin
 
-- [Admin Module](https://docs.xperience.io/xp/developers-and-admins/customization/extend-the-administration-interface/prepare-your-environment-for-admin-development#Prepareyourenvironmentforadmindevelopment-Renametheboilerplateproject)
+- [Admin Module](https://docs.kentico.com/developers-and-admins/customization/extend-the-administration-interface/prepare-your-environment-for-admin-development#Prepareyourenvironmentforadmindevelopment-Renametheboilerplateproject)
 
   - Required suffix `AdminModule`
 
@@ -67,16 +69,17 @@ This package includes the following item templates.
 
     `.\App.Admin\Apples\AppleAdminModule.cs`
 
-- [Admin Application Page](https://docs.xperience.io/x/2gSiCQ)
+- [Admin Application Page](https://docs.kentico.com/x/2gSiCQ)
+
   - Required suffix `ApplicationPage`
-  
+
     `dotnet new xpc-admin-application-page -n AppleApplicationPage -o .\App.Admin\Apples`
 
   - Generates
 
     `.\App.Admin\Apples\AppleApplicationPage.cs`
 
-- [Admin Edit Page](https://docs.xperience.io/x/1IouCw)
+- [Admin Edit Page](https://docs.kentico.com/x/1IouCw)
 
   - Required suffix `EditPage`
 
@@ -86,7 +89,7 @@ This package includes the following item templates.
 
     `.\App.Admin\Apples\AppleEditPage.cs`
 
-- [Admin Edit Section Page](https://docs.xperience.io/x/1IouCw)
+- [Admin Edit Section Page](https://docs.kentico.com/x/1IouCw)
 
   - Required suffix `EditSectionPage`
 
@@ -94,9 +97,9 @@ This package includes the following item templates.
 
   - Generates
 
-    `.\App.Admin\Apples\AppleEditSectionPage.cs`  
+    `.\App.Admin\Apples\AppleEditSectionPage.cs`
 
-- [Admin List Page](https://docs.xperience.io/x/1oouCw)
+- [Admin List Page](https://docs.kentico.com/x/1oouCw)
 
   - Required suffix `ListPage`
 
@@ -106,7 +109,7 @@ This package includes the following item templates.
 
     `.\App.Admin\Apples\AppleListPage.cs`
 
-- [Admin Create Page](https://docs.xperience.io/xp/developers-and-admins/customization/extend-the-administration-interface/ui-pages/reference-ui-page-templates/edit-ui-page-template#EditUIpagetemplate-Useeditpagestocreatenewobjects)
+- [Admin Create Page](https://docs.kentico.com/developers-and-admins/customization/extend-the-administration-interface/ui-pages/reference-ui-page-templates/edit-ui-page-template#EditUIpagetemplate-Useeditpagestocreatenewobjects)
 
   - Required suffix `CreatePage`
 
@@ -116,7 +119,7 @@ This package includes the following item templates.
 
     `.\App.Admin\Apples\AppleCreatePage.cs`
 
-- [Admin Page Extender](https://docs.xperience.io/x/4gSiCQ)
+- [Admin Page Extender](https://docs.kentico.com/x/4gSiCQ)
 
   - Required suffix `PageExtender`
 
@@ -126,7 +129,7 @@ This package includes the following item templates.
 
     `.\App.Admin\Apples\ApplePageExtender.cs`
 
-- [Admin UI Form Component](https://docs.xperience.io/x/5ASiCQ)
+- [Admin UI Form Component](https://docs.kentico.com/x/5ASiCQ)
 
   - Required suffix `FormComponent`
 
@@ -136,7 +139,7 @@ This package includes the following item templates.
 
     `.\App.Admin\Apples\AppleFormcomponent.cs`
 
-- [Admin UI Form Component (TSX))](https://docs.xperience.io/xp/developers-and-admins/customization/extend-the-administration-interface/ui-form-components#UIformcomponents-Formcomponentfrontend)
+- [Admin UI Form Component (TSX))](https://docs.kentico.com/developers-and-admins/customization/extend-the-administration-interface/ui-form-components#UIformcomponents-Formcomponentfrontend)
 
   - Required suffix `FormComponent`
 
@@ -146,7 +149,7 @@ This package includes the following item templates.
 
     `.\App.Admin\Client\src\apples\AppleFormComponent.tsx`
 
-- [Validation Rule](https://docs.xperience.io/x/6QSiCQ)
+- [Validation Rule](https://docs.kentico.com/x/6QSiCQ)
 
   - Required suffix `ValidationRule`
 
@@ -156,7 +159,7 @@ This package includes the following item templates.
 
     `.\App.Admin\Apples\FreshAppleValidationRule.cs`
 
-- [Validation Rule (TypeScript)](https://docs.xperience.io/xp/developers-and-admins/customization/extend-the-administration-interface/ui-form-components/ui-form-component-validation-rules#UIformcomponentvalidationrules-Validationrulefrontend)
+- [Validation Rule (TypeScript)](https://docs.kentico.com/developers-and-admins/customization/extend-the-administration-interface/ui-form-components/ui-form-component-validation-rules#UIformcomponentvalidationrules-Validationrulefrontend)
 
   - Required suffix `ValidationRule`
 
@@ -168,7 +171,7 @@ This package includes the following item templates.
 
 ### Form Builder
 
-- [Form Component](https://docs.xperience.io/x/YIbWCQ)
+- [Form Component](https://docs.kentico.com/x/YIbWCQ)
 
   - Required suffix `FormComponent`
 
@@ -180,7 +183,7 @@ This package includes the following item templates.
 
     `.\App.Web\Components\FormComponents\Apple\Apple.cshtml`
 
-- [Form Section](https://docs.xperience.io/x/ZYbWCQ)
+- [Form Section](https://docs.kentico.com/x/ZYbWCQ)
 
   - Required suffix `FormSection`
 
@@ -194,7 +197,7 @@ This package includes the following item templates.
 
 ### Page Builder
 
-- [Widget](https://docs.xperience.io/xp/developers-and-admins/development/builders/page-builder/widgets-for-page-builder#WidgetsforPageBuilder-Widgetsbasedonaviewcomponent)
+- [Widget](https://docs.kentico.com/developers-and-admins/development/builders/page-builder/widgets-for-page-builder#WidgetsforPageBuilder-Widgetsbasedonaviewcomponent)
 
   - Required suffix `Widget`
 
@@ -206,7 +209,7 @@ This package includes the following item templates.
 
     `.\App.Web\Components\Widgets\Apple\Apple.cshtml`
 
-- [Section](https://docs.xperience.io/xp/developers-and-admins/development/builders/page-builder/sections-for-page-builder#SectionsforPageBuilder-Sectionsbasedonaviewcomponent)
+- [Section](https://docs.kentico.com/developers-and-admins/development/builders/page-builder/sections-for-page-builder#SectionsforPageBuilder-Sectionsbasedonaviewcomponent)
 
   - Required suffix `Section`
 

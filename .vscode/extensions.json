@@ -1,0 +1,9 @@
+{
+  "recommendations": [
+    "ms-dotnettools.csdevkit",
+    "github.vscode-github-actions",
+    "davidanson.vscode-markdownlint",
+    "ms-vscode.powershell",
+    "esbenp.prettier-vscode"
+  ]
+}
