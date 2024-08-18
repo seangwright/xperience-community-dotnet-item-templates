@@ -1,7 +1,6 @@
 using MyApp.Web.Components.Widgets.ComponentPrefix;
 using Kentico.Forms.Web.Mvc;
 using CMS.DataEngine;
-using Microsoft.AspNetCore.Mvc.ViewFeatures;
 
 [assembly: RegisterFormComponent(
     identifier: NewFormComponent.IDENTIFIER,

@@ -1,4 +1,3 @@
-using System;
 using System.Runtime.Serialization;
 using CMS.DataEngine;
 
@@ -8,20 +7,19 @@ public class NewInfo : AbstractInfoBase<NewInfo>
 {
     public const string OBJECT_TYPE = "";
 
-    public readonly static ObjectTypeInfo TYPEINFO =
+    public static readonly ObjectTypeInfo TYPEINFO =
         new(
-            typeof(NewInfo),
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            ""
+            providerType: typeof(NewInfo),
+            objectType: "",
+            objectClassName: "",
+            idColumn: "",
+            timeStampColumn: "",
+            guidColumn: "",
+            codeNameColumn: "",
+            displayNameColumn: "",
+            binaryColumn: "",
+            parentIDColumn: "",
+            parentObjectType: ""
         );
 
     public NewInfo() : base(TYPEINFO)
@@ -37,8 +35,5 @@ public class NewInfo : AbstractInfoBase<NewInfo>
     {
     }
 
-    protected override BaseInfo NewObject(LoadDataSettings settings)
-    {
-        throw new NotImplementedException();
-    }
+    protected override BaseInfo NewObject(LoadDataSettings settings) => new NewInfo();
 }

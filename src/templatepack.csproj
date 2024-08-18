@@ -5,7 +5,7 @@
     <Copyright>Copyright © $(Company) $([System.DateTime]::Now.Year)</Copyright>
     <Trademark>$(Company)™</Trademark>
 
-    <VersionPrefix>1.0.3</VersionPrefix>
+    <VersionPrefix>2.0.0</VersionPrefix>
     <Product>XperienceCommunity.DotnetItemTemplates</Product>
     <PackageId>XperienceCommunity.DotnetItemTemplates</PackageId>
     <PackageIcon>content/templates/images/icon.png</PackageIcon>
@@ -35,12 +35,8 @@
     <Content Remove="templates\**\*.csproj" />
     <Content Remove="templates\**\_ViewImports.cshtml" />
 
-    <Content
-      Remove="templates\**\package.json;templates\**\package-lock.json"
-    />
-    <Content
-      Remove="templates\**\babel.config.json;templates\**\tsconfig.json"
-    />
+    <Content Remove="templates\**\package.json;templates\**\package-lock.json" />
+    <Content Remove="templates\**\babel.config.json;templates\**\tsconfig.json" />
     <Content Remove="templates\**\node_modules\**" />
 
     <Compile Remove="**\*" />

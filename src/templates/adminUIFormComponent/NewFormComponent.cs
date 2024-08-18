@@ -46,6 +46,6 @@ public class NewFormComponentAttribute : FormComponentAttribute
     // This property name must match the NewFormComponentProperties.PlaceholderText
     // in both name and type exactly for the value to be mapped to the component
     // properties correctly
-    // See: https://docs.xperience.io/xp/developers-and-admins/customization/extend-the-administration-interface/ui-form-components/editing-components#Editingcomponents-Createeditingcomponentattributesforcustomformcomponents
+    // See: https://docs.kentico.com/developers-and-admins/customization/extend-the-administration-interface/ui-form-components/editing-components#Editingcomponents-Createeditingcomponentattributesforcustomformcomponents
     public string PlaceholderText { get; set; } = "";
 }
